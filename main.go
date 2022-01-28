@@ -14,6 +14,7 @@ func main() {
 
 	e.POST("/add/single", controller.AddSingle)
 	e.POST("/add/batch", controller.AddBatch)
+	e.POST("/add/batch/async", controller.AddBatchUsingGoRoutine)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
