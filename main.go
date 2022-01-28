@@ -13,6 +13,7 @@ func main() {
 	e.Use(middleware.Logger())
 
 	e.POST("/add/single", controller.AddSingle)
+	e.POST("/add/batch", controller.AddBatch)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
